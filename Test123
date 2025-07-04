@@ -1,0 +1,47 @@
+local Players = game:GetService("Players")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local player = Players.LocalPlayer
+
+local petNames = {"Raccoon", "Dragonfly", "Mimic Octopus", "Queen Bee", "Red Fox", "Disco Bee", "Fennec Fox"}
+local currentIndex = 1
+
+local gui = Instance.new("ScreenGui", game:GetService("CoreGui"))
+gui.Name = "PetSpawnerUI"
+
+local petBtn = Instance.new("TextButton", gui)
+petBtn.Size = UDim2.new(0, 160, 0, 35)
+petBtn.Position = UDim2.new(0.5, -80, 0.75, 0)
+petBtn.Text = "Pet: " .. petNames[currentIndex]
+petBtn.BackgroundColor3 = Color3.fromRGB(0, 170, 90)
+petBtn.TextColor3 = Color3.new(1, 1, 1)
+petBtn.Font = Enum.Font.GothamBold
+petBtn.TextSize = 16
+petBtn.Draggable = true
+petBtn.Active = true
+
+local ageBox = Instance.new("TextBox", gui)
+ageBox.Size = UDim2.new(0, 100, 0, 30)
+ageBox.Position = UDim2.new(0.5, -120, 0.8, 0)
+ageBox.PlaceholderText = "Age"
+ageBox.Text = ""
+ageBox.Font = Enum.Font.SourceSans
+ageBox.TextSize = 16
+ageBox.BackgroundColor3 = Color3.fromRGB(240, 240, 240)
+ageBox.TextColor3 = Color3.new(0, 0, 0)
+
+local weightBox = Instance.new("TextBox", gui)
+weightBox.Size = UDim2.new(0, 100, 0, 30)
+weightBox.Position = UDim2.new(0.5, 20, 0.8, 0)
+weightBox.PlaceholderText = "Weight"
+weightBox.Text = ""
+weightBox.Font = Enum.Font.SourceSans
+weightBox.TextSize = 16
+weightBox.BackgroundColor3 = Color3.fromRGB(240, 240, 240)
+weightBox.TextColor3 = Color3.new(0, 0, 0)
+
+local spawnBtn = Instance.new("TextButton", gui)
+spawnBtn.Size = UDim2.new(0, 160, 0, 35)
+spawnBtn.Position = UDim2.new(0.5, -80, 0.88, 0)
+spawnBtn.Text = "Spawn Pet"
+spawnBtn.BackgroundColor3 = Color3.fromRGB(60, 120, 255)
+spawnBtn.TextColor
